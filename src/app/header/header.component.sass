@@ -1,0 +1,38 @@
+@import '../../assets/variables.sass'
+
+nav.alternative
+  background-color: $secondary-color
+  .navbar-brand
+    color: $main-color
+
+  a.nav-link
+    &:hover,
+    &.active-link
+      color: $main-color !important
+
+nav
+  background-color: transparent
+  .navbar-brand
+    font-family: 'Roboto', sans-serif
+    font-size: 7vh
+    color: white
+
+  a.nav-link
+    color: white !important
+    &:hover,
+    &.active-link
+      color: white !important
+
+.custom-toggler.navbar-toggler
+    border-color: white
+
+.custom-toggler .navbar-toggler-icon
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+
+.nav-item.disabled
+  cursor: not-allowed
+
+@media (max-width: 768px)
+  nav .navbar-brand
+    font-size: 5vh
+

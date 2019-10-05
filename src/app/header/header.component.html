@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" [class.bg-main-color-opaque]="navbarOpen" [class.alternative]="!isLandingPage"
+  [@fade]="isLandingPage ? 'faded' : 'solid'">
+  <a class="navbar-brand" href="#">
+      <img src="assets/images/transparent-logo.png" width="80%" height="80%" class="d-inline-block align-top" [alt]="brand">
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [class.show]="navbarOpen">
+    <ul class="navbar-nav ml-auto">
+      <!-- <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">{{ 'home' | translate }}</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/experience']" routerLinkActive="active-link">{{ 'the_team' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link">{{ 'about' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active-link">{{ 'contact' | translate }}</a>
+      </li>
+      <li class="nav-item disabled">
+        <a class="nav-link">{{ 'appointments' | translate }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
